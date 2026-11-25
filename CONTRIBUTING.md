@@ -1,42 +1,48 @@
-# 🤝 Contributing
+# Contributing
 
-> How to add, update, or retire a skill in this repository.
-
----
-
-## ➕ Add a Skill
-
-| Step | Action |
-|:-:|---|
-| 1 | Pick the AI folder (`claude/`, `antigravity/`, …) — or `shared/` for cross-AI guides |
-| 2 | `mkdir -p <ai>/skills/<skill-name>` |
-| 3 | `cp templates/SKILL_TEMPLATE.md <ai>/skills/<skill-name>/SKILL.md` |
-| 4 | Fill in every section; delete any placeholder text in _italics_ |
-| 5 | Add a row to `<ai>/README.md` **and** the root `README.md` catalog |
-| 6 | Run through the [review checklist](shared/guides/writing-great-skills.md#-review-checklist) |
-| 7 | Commit on a branch: `git switch -c add/<skill-name>` |
+There are two ways to contribute. Both use [`templates/SKILL_TEMPLATE.md`](templates/SKILL_TEMPLATE.md).
 
 ---
 
-## ✏️ Update a Skill
+## Path A: Add a skill to an existing AI
 
-- Bump `version` in the frontmatter (`0.1.0` → `0.2.0` for new steps, `0.1.1` for wording fixes)
-- Add a row to the skill's **Changelog**
-- Keep the example in sync with the steps
+1. Open the AI's `skills/` folder, for example `claude/skills/`.
+2. Create a new folder named after the skill, for example `summarize-meeting`.
+3. Copy `templates/SKILL_TEMPLATE.md` into that folder and rename it `SKILL.md`.
+4. Fill in each section and delete the placeholder text.
+5. Add the skill to the list in that AI's `README.md`.
 
-## 🗄 Retire a Skill
-
-- Set **Status** to `deprecated` and add a note pointing to the replacement
-- Leave it in place for one release cycle, then remove it and its catalog rows
+```text
+claude/
+└── skills/
+    └── summarize-meeting/
+        └── SKILL.md
+```
 
 ---
 
-## 📐 Naming
+## Path B: Add a new AI tool
 
-| Item | Convention | Example |
+1. Create a new top-level folder named after the tool, for example `cursor/` or `gemini/`.
+2. Inside it, add a `README.md` with one or two lines about the tool.
+3. Inside it, add an empty `skills/` folder.
+4. Add skills the same way as Path A.
+5. Add the new folder to the **Folders** table in the main [`README.md`](README.md).
+
+```text
+gemini/
+├── README.md
+└── skills/
+```
+
+---
+
+## Naming Tips
+
+| Item | Rule | Example |
 |---|---|---|
-| AI folder | lowercase | `claude/` |
-| Skill folder | `kebab-case`, verb or outcome | `issue-to-pr/` |
-| Main file | always `SKILL.md` | — |
-| Branch | `add/`, `update/`, `remove/` + skill name | `add/issue-to-pr` |
-| Commit | imperative, present tense | `Add issue-to-pr skill for Claude` |
+| AI folder | lowercase | `gemini/` |
+| Skill folder | lowercase words joined by dashes | `summarize-meeting/` |
+| Skill file | always `SKILL.md` | `SKILL.md` |
+
+If a guide applies to every AI tool, put it in `shared/guides/` instead of an AI folder.

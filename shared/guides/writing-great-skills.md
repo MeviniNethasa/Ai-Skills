@@ -1,59 +1,57 @@
-# ✍️ Writing Great Skills
+# Writing Great Skills
 
-> A short guide to making skills that are easy to find, easy to follow, and safe to run.
-
----
-
-## 🧭 The Core Idea
-
-A skill answers three questions, **in this order**:
-
-| # | Question | Section | Tone |
-|:-:|---|---|---|
-| 1 | What is this? | **What the skill is** | Descriptive |
-| 2 | Should I use it right now? | **When to use it** | Decisive |
-| 3 | How exactly do I do it? | **How to do it** | Imperative |
-
-> [!IMPORTANT]
-> Keep **context** (1–2) and **procedure** (3) separate. A reader should be able to decide *whether* to use a skill without wading through *how*.
+A short guide to writing skills that are easy to follow.
 
 ---
 
-## ✅ Do
+## The Basic Idea
 
-- **Start steps with a verb** — "Create a branch", not "A branch should be created"
-- **Give every step a check** — how do you know it worked?
-- **Name the stop conditions** — when should the AI pause and ask?
-- **Show one real example** — input → walkthrough → output
-- **Link, don't duplicate** — point to `shared/` guides instead of copying them
+A skill answers three questions, in this order:
 
-## 🚫 Don't
-
-- Mix "when" conditions into the steps
-- Write steps that depend on tools the project doesn't already use
-- Hide risky actions (push, delete, publish) inside a step without a guardrail
-- Let one skill do several unrelated jobs — split it
-
----
-
-## 📏 Size Guide
-
-| Part | Target |
+| Question | Section |
 |---|---|
-| What the skill is | 2–4 sentences |
-| When to use it | 3–5 bullets each for ✅ / 🚫 |
-| Steps | 3–8 steps |
-| Guardrails | 3–6 rows |
-| Example | 1 complete run |
+| What is this? | What This Skill Does |
+| Should I use it now? | When to Use It |
+| How do I do it? | How to Do It (Step-by-Step) |
+
+Keep the first two separate from the steps. A reader should be able to decide whether a skill fits without reading the steps.
 
 ---
 
-## 🔍 Review Checklist
+## Do
 
-- [ ] Frontmatter `name` matches the folder name
-- [ ] `description` says what it does **and** when to trigger it
-- [ ] Part A contains no instructions; Part B contains no background essays
-- [ ] Every step has a **✔ Check**
-- [ ] Guardrails cover anything irreversible
-- [ ] The example matches the steps exactly
-- [ ] The skill is listed in its AI folder README and the root catalog
+- Start each step with an action word: "Create a folder", not "A folder should be created".
+- Give each step a check, so you know it worked.
+- Say when to stop and ask a person.
+- Include one real example.
+- Link to guides in `shared/` instead of copying them.
+
+## Do Not
+
+- Put "when to use it" conditions inside the steps.
+- Rely on tools the project does not already use.
+- Hide risky actions, like deleting or publishing, without a rule about them.
+- Make one skill do several unrelated jobs. Split it instead.
+
+---
+
+## Size Guide
+
+| Section | Aim for |
+|---|---|
+| What This Skill Does | 2 to 4 sentences |
+| When to Use It | 2 to 5 points each |
+| Steps | 3 to 8 steps |
+| Rules | 2 to 6 rows |
+| Example | 1 full example |
+
+---
+
+## Before You Share It
+
+- The folder name matches the `name` at the top of the file.
+- The `description` says what it does and when to use it.
+- Every step has a check.
+- The rules cover anything that cannot be undone.
+- The example matches the steps.
+- The skill is listed in its AI folder's `README.md`.

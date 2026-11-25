@@ -1,17 +1,11 @@
-# 🟢 Shared Guides
+# Shared
 
-> Knowledge that applies to **every** AI folder. Write it once here, then link to it from skills — don't copy it.
+Guides that apply to every AI tool. Link to these from a skill instead of copying them.
 
----
+## Guides
 
 | Guide | What it covers |
 |---|---|
-| [`writing-great-skills.md`](guides/writing-great-skills.md) | How to write clear, safe, reusable skills |
+| [`writing-great-skills.md`](guides/writing-great-skills.md) | How to write skills that are clear and easy to follow |
 
----
-
-## 📌 What belongs here
-
-- ✅ Writing standards, checklists, glossaries
-- ✅ Procedures reused by skills in more than one AI folder
-- 🚫 Anything specific to a single assistant — put it in that AI's folder
+Anything specific to one AI tool belongs in that tool's folder, not here.
